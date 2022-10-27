@@ -9,6 +9,9 @@ local keymap = vim.keymap.set
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
 keymap("n", "<C-i>", "<C-i>", opts)
 
+keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<m-h>", "<C-w>h", opts)
