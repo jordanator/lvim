@@ -11,6 +11,11 @@ lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.builtin.cmp.cmdline.enable = false
+lvim.builtin.cmp.window.documentation = false
+lvim.builtin.cmp.window.completion = {
+  border = "rounded",
+  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+}
 lvim.builtin.cmp.formatting.source_names = {
   nvim_lsp = "",
   emoji = "",
@@ -24,12 +29,15 @@ lvim.builtin.cmp.formatting.source_names = {
   copilot = "",
   treesitter = "",
 }
+-- vim.g.netrw_browse_split = 0
+-- vim.g.netrw_banner = 0
+-- vim.g.netrw_winsize = 25
 vim.opt.showtabline = 0
 
 local options = {
   backup = false, -- creates a backup file
   clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-  cmdheight = 0, -- more space in the neovim command line for displaying messages
+  cmdheight = 1, -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0, -- so that `` is visible in markdown files
   fileencoding = "utf-8", -- the encoding written to a file
