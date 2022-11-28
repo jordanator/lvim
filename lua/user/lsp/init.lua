@@ -18,6 +18,7 @@ formatters.setup {
   { command = "google_java_format", filetypes = { "java" } },
   { command = "stylua", filetypes = { "lua" } },
   { command = "shfmt", filetypes = { "sh", "zsh" } },
+  { command = "blade-formatter", filetypes = { "php" } },
 }
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
