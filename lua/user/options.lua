@@ -2,19 +2,24 @@ lvim.colorscheme = "darkplus"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.lsp.diagnostics.float.focusable = true
-lvim.reload_config_on_save =  false
+lvim.reload_config_on_save = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+-- lvim.builtin.nvimtree.setup.view.mappings.custom_only = true
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.cmp.cmdline.enable = false
-lvim.builtin.cmp.window.documentation = false
+-- lvim.builtin.cmp.window.documentation = false
+lvim.builtin.cmp.window.documentation = {
+  border = "rounded",
+  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+}
 lvim.builtin.cmp.window.completion = {
   border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
@@ -104,4 +109,12 @@ vim.filetype.add {
   extension = {
     conf = "dosini",
   },
+}
+
+lvim.builtin.nvimtree.setup.view.mappings.list = {
+  { key = { "l", "<CR>", "o" }, action = "edit", mode = "n" },
+  { key = "h", action = "close_node" },
+  { key = "v", action = "vsplit" },
+  { key = "<C-k>", action = "" },
+  { key = "C", action = "cd" },
 }
