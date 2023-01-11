@@ -6,6 +6,7 @@ require "user.lsp.languages.sh"
 require "user.lsp.languages.php"
 require "user.lsp.languages.taplo"
 require "user.lsp.languages.emmet"
+require "user.lsp.languages.css"
 
 lvim.lsp.diagnostics.virtual_text = false
 
@@ -22,6 +23,7 @@ formatters.setup {
   { command = "stylua", filetypes = { "lua" } },
   { command = "shfmt", filetypes = { "sh", "zsh" } },
   { command = "blade-formatter", filetypes = { "php" } },
+  { command = "prettier", filetypes = { "css" } },
 }
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
