@@ -77,7 +77,7 @@ lvim.plugins = {
   },
   {
     "zbirenbaum/copilot.lua",
-    -- cmd = "Copilot",
+    cmd = "Copilot",
     event = "InsertEnter",
   },
   {
