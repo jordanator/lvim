@@ -6,6 +6,7 @@ reload "user.lsp"
 reload "user.smoothie"
 reload "user.harpoon"
 reload "user.cybu"
+reload "user.neotest"
 reload "user.surround"
 reload "user.bookmark"
 reload "user.todo-comments"
@@ -30,10 +31,3 @@ reload "user.copilot"
 reload "user.whichkey"
 reload "user.neoai"
 -- lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
-
-lvim.builtin.which_key.mappings["P"] = {
-  name = "Python",
-  i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
-  d = { "<cmd>lua require('swenv.api').get_current_venv()<cr>", "Show Env" },
-}
-
