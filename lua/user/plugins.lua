@@ -1,22 +1,32 @@
 -- Additional Plugins
 lvim.plugins = {
+  -- {
+  --   dir = "/Users/chris/Repos/bookmark.nvim",
+  -- },
+  "lunarvim/synthwave84.nvim",
+  {
+    "kndndrj/nvim-dbee",
+    build = function()
+      require("dbee").install()
+    end,
+  },
+  "kkharji/sqlite.lua",
+  { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
+  { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
+  -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
-  "lunarvim/onedarker.nvim",
-  "LunarVim/synthwave84.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
-  "lunarvim/github.nvim",
-  "nvim-treesitter/playground",
+  -- "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
   "j-hui/fidget.nvim",
-  "christianchiarulli/nvim-ts-autotag",
+  "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
-  "MattesGroeger/vim-bookmarks",
+  -- "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
-  "ghillb/cybu.nvim",
   "moll/vim-bbye",
   "folke/todo-comments.nvim",
   "windwp/nvim-spectre",
@@ -27,22 +37,17 @@ lvim.plugins = {
   "folke/zen-mode.nvim",
   "lvimuser/lsp-inlayhints.nvim",
   "lunarvim/darkplus.nvim",
-  "lunarvim/templeos.nvim",
   "kevinhwang91/nvim-bqf",
   "is0n/jaq-nvim",
-  -- "hrsh7th/cmp-emoji",
-  "ggandor/leap.nvim",
   "nacro90/numb.nvim",
   "TimUntersberger/neogit",
   "sindrets/diffview.nvim",
   "simrat39/rust-tools.nvim",
   "olexsmir/gopher.nvim",
   "leoluz/nvim-dap-go",
-  "mfussenegger/nvim-dap-python",
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
-  "renerocksai/telekasten.nvim",
   -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
@@ -85,24 +90,23 @@ lvim.plugins = {
       require("copilot_cmp").setup()
     end,
   },
-  {
-    "tzachar/cmp-tabnine",
-    event = "InsertEnter",
-    build = "./install.sh",
-  },
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   event = "BufRead",
+  --   build = "./install.sh",
+  -- },
 
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
   "mfussenegger/nvim-dap-python",
   "nvim-neotest/neotest",
   "nvim-neotest/neotest-python",
-  -- {
-  --   "folke/noice.nvim",
-  --   event = "VimEnter",
-  --   config = function()
-  --     require("noice").setup()
-  --   end,
-  -- },
+  {
+    "hrsh7th/cmp-emoji",
+    event = "BufRead",
+  },
+  -- "folke/noice.nvim",
+  -- "rcarriga/nvim-notify",
 
   -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
